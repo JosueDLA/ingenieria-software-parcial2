@@ -24,7 +24,7 @@ public class ProductoController {
         return this.productoService.buscarTodos();
     }
     
-    @PostMapping("/resgistaProducto")
+    @PostMapping("/registrarProducto")
     public ProductoEntity registraProducto(@RequestBody(required = true) ProductoEntity p1){
         return this.productoService.registrarProducto(p1);
     }
