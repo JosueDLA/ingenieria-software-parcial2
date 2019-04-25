@@ -21,6 +21,9 @@ public class CabeceraFacturaEntity implements Serializable {
     @Column(name = "nombre_cliente")
     private String clientName;
     
+    @Column(name = "direccion")
+    private String direccion;
+    
     @Column(name = "nit")
     private String nit;
     
@@ -31,12 +34,21 @@ public class CabeceraFacturaEntity implements Serializable {
     public CabeceraFacturaEntity() {
     }
 
-    public CabeceraFacturaEntity(String clientName, String nit, Date date) {
+    public CabeceraFacturaEntity(String clientName, String direccion, String nit, Date date) {
         this.clientName = clientName;
+        this.direccion = direccion;
         this.nit = nit;
         this.date = date;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
     public Long getId() {
         return id;
     }
